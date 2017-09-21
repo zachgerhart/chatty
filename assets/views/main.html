@@ -6,9 +6,12 @@
 <div class="jumbotron">
 
 	<form ng-submit="addMessage(newMessage)">
-		<input ng-model="newMessage" type="text" placeholder="Hello!">
-	</form>
+		<input ng-model="newMessage" type="text" placeholder="Message">
+    <input ng-model="newUser" type="text" placeholder="Username">
+    <input type="submit" id="submit">sahhhh</input>
+  </form>
 
-	<div ng-repeat="message in messages track by $index">{{ message }}</div>
-
+  <div ng-repeat="message in messages track by $index">
+    {{message.message}} : {{message.time | date: "shortTime"}}
+  </div>
 </div>
